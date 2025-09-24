@@ -20,4 +20,23 @@
 10) ls -lh intrigues 
 11) find . -type f -name "*white*"
 12) find . -type d -name "*in*" 
+13)
+~~~bash 
+ls *a*i* 
+ls [^oas]* 
+ls *i*i*.fbi 
+ls ??????.*[^i]
+~~~
+14)
+~~~bash
+find -type f -name "*p*[^is]" 
+~~~
+15) rm -r phoenix 
+16) rm mystery
+17) mv ~/S11/BBFTP/Albuquerque/dale.cooper ~/S11/BBFTP/Seattle/TwinPeaks  // rm *.fbi  
+18) mv
+
+## exo 4
+1) gzip charlotte.tar  
+2) gunzip charlotte.tar.gz 
 
