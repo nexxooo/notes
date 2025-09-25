@@ -10,6 +10,9 @@
 8) select nom,metier, substr(nom,1,5)||metier"abv" from iin_gaulois order by sexe,"abv";
 
 ## exo 2
-
+1) select ename,hiredate,sal,job,round((sysdate-hiredate)) from emp order by hiredate;
+2) SELECT next_day(sysdate, 'LUNDI') FROM dual;
+3) SELECT next_day(to_date('06/07/2007', 'dd,mm,yyyy'), 'VENDREDI') FROM dual;
+4) 
 
 
