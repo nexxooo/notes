@@ -120,3 +120,11 @@ to_char()
 to_date()
 to_number()
 ~~~
+
+## Requete avec jointure 
+~~~sql
+SELECT *
+FROM pilotes
+JOIN vols
+ON vols.pilotes = pilotes.npilotes;
+~~~
