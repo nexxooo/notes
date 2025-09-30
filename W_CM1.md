@@ -65,4 +65,43 @@ h3{
 * les style sont appliqué dans l'ordre de la feuillle css
 * si un élément se voit attribue plusieur style par des selecteur different, une priorité sur le type de selecteur s'applique 
 
+### mise en forme du texte 
+~~~CSS
+font-familly:"...","..."
+tet-align:
+line-height:
+border-radius:
+background-image
+background-repeat
+display
+border 
+width
+~~~
+### taille 
+* relatif 
+  * em 
+  * rem 
+  * %
+* absolue 
+  * px 
+  * inch 
+  * cm 
+### Flex box 
+permet de distribuer l'espace entre les objet d'un conteneur pour les placer comme on le souhaite 
+#### pour mettre en place 
+~~~css
+.container{
+display: flex,
+flex-direction: row/colum;
+flew-wrap: wrap/ wrpa-reverse // passage a la ligne 
+
+justify-content // distribue l'espace sur l'axe principale
+align-item // dist axe secondaire
+align-content // si plusieur ligne
+
+// les enfant peuvent influencer leur propre taille et position 
+flex-grown 
+}
+~~~
+
 
