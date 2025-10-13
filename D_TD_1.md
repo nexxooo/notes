@@ -128,3 +128,115 @@ FROM pilotes
 JOIN vols
 ON vols.pilotes = pilotes.npilotes;
 ~~~
+## gerer des table 
+### contrainte
+- reférence 
+- intégrité 
+- applicative (ex arrivee != depart )
+### Type 
+~~~slq
+char(n) 
+varchar(n)
+number
+number(p)
+number(p,d)
+date 
+~~~
+### crée table 
+~~~sql
+CREATE TABLE nom
+CONSTRAINT id PRIMARY KEY
+CONSTRAINT fk FOREIGN KEY
+REFERENCES dept(deptno) ON DELETE CASCADE
+~~~
+### convention
+* pk_ cle primaire
+* fk_ cle etrangere
+
+### exemple
+~~~sql 
+CREATE TABLE emp
+(empno number(8) NOT NULL, ename varchar2(20) NOT NULL,
+job varchar2(20) NOT NULL, mgr number(8),
+hiredate date DEFAULT sysdate,
+sal number(8,2) NOT NULL, comm number(8),
+deptno number(2),
+CONSTRAINT c_emp_sal
+CHECK(sal between 800 and 50000),
+CONSTRAINT c_emp_commJob
+CHECK((comm is not null and initcap(job) = 'Salesman') or
+(comm is null and initcap(job) != 'Salesman') ),
+CONSTRAINT u_emp_ename UNIQUE(ename),
+CONSTRAINT pk_emp PRIMARY KEY (empno),
+CONSTRAINT fk_emp_deptno FOREIGN KEY (deptno)
+REFERENCES dept ON DELETE CASCADE,
+CONSTRAINT fk_emp_mgr FOREIGN KEY (mgr)
+REFERENCES emp
+) ;
+~~~
+### supprimer
+~~~
+drop table ex
+~~~
+### renomer
+~~~ 
+remane ex to ex1
+~~~
+### modifier la table 
+~~~sql
+alter table emp
+modify (sal number(10,2),job varchar2(30));
+
+alter table emp
+modify (job null) ;
+
+alter table dept
+add (budget number(6));
+
+alter table dept
+drop column budget ;
+~~~
+## VUE
+### exemple
+~~~sql
+create view personnel
+as select e.empno, e.ename, e.job,
+d.dname, d.loc
+from emp e JOIN dept d
+ON e.deptno = d.deptno ;
+~~~
+permet de crée de table "fantome" pour les réutiliser sans tous réecrire
+## MISE A JOUR 
+### inseret 
+~~~sql
+INSERT INTO dept (deptno, dname, loc)
+VALUES (55, 'LOISIR', 'STRASBOURG');
+~~~
+~~~sql
+INSERT INTO chefs (no_chef, nom_chef)
+SELECT empno, ename FROM emp
+WHERE empno IN (SELECT mgr FROM emp);
+~~~
+~~~sql
+INSERT INTO mondept (deptno, dname, loc)
+VALUES (&numero, '&nom', '&ville');
+~~~
+> & pour demander les valeur 
+### supprimer
+~~~sql
+DELETE 
+FROM ex
+WHERE ___
+~~~
+### modifier
+~~~sql
+UPDATE dept SET loc = 'PARIS';
+WHERE ___
+~~~
+> update ne doit renvoyer qu'une seule valeur
+## VALIDATION / ANNULATION
+~~~sql
+COMMIT
+ROLLBACK
+~~~
+> juste pour INSERT/DELETE/UPDATE 
