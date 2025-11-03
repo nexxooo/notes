@@ -9,10 +9,19 @@
   * politesse
   * Prenom Nom
   * en tant que 
-
-## TD
-Très chèr voisin, sauf erreur de ma part je vous est deja fais part à deux reprises des problèmes sonores j'ai également essayé de taper dans le mur pour vous prevenir mais cela sans résultat.  
-Je souhaite résoudre ce probleme a la miable, donc je vous propose de décaler vos séance de musique pendant la journé ou dans un endroit prévue a cette effet.  
-Sans retour de votre part je serait obliger de faire appel au force de l'ordre 
-
-
+## Chapitre 2 Raisonnement en langage naturel
+* si A, alors B ou A implique B 
+* a =>B alors non B => non A 
+### Syllogisme
+1. Tous les *A* sont *B*
+2. OR *C* est un *A* 
+3. DONC *C* est B  
+### Syllogisme negatif
+1. Tous les A sont B 
+2. OR C n'est pas B 
+2. => C n'est pas un A 
+## Chapitre 3 Problème généraux de la communication 
+### Intro 
+* information --> très important / ensemble de donné 
+* donné 
+* Signal --> impulsion électrique 

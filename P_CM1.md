@@ -14,4 +14,5 @@ de résultat,
 l'algorithme principal.
 > Les déclarations effectuées dans l'algorithme principal ne sont pas connues des fonctions et procédures et vice-versa ! On dit qu'elles sont étanches.
 
-test 
+## Les fichier texte séquentiels
+
