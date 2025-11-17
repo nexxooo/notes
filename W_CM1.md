@@ -104,4 +104,13 @@ flex-grown
 }
 ~~~
 
+## JS
+### mettre le js dans le html
+~~~html
+<script src="js/script1.js"></script>
+~~~
+### definir variable
+~~~js
+let
+~~~
 
